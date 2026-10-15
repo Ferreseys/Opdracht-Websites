@@ -1,0 +1,114 @@
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Ferre Portfolio</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a class="logo" href="index.html">Ferre <span>Portfolio</span></a>
+
+      <nav aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="interesse.html">Interesses</a></li>
+          <li><a href="hobby.html">Hobby's</a></li>
+          <li><a href="ervaring.html">Ervaring</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Neem <span>contact</span> op</h1>
+      <p>Heb je een vraag of wil je contact opnemen? Stuur me gerust een bericht.</p>
+    </section>
+
+    <section class="contact-container">
+      <aside class="contact-info">
+        <h2>Hoe kan je me bereiken?</h2>
+        <p>
+          Vul het formulier in. Je bericht wordt naar mijn e-mailadres gestuurd.
+        </p>
+        <p>
+          Je kunt me ook rechtstreeks mailen:
+          <a href="mailto:seysferre@gmail.com">seysferre@gmail.com</a>
+        </p>
+      </aside>
+
+      <section class="contact-form-section" aria-labelledby="form-title">
+        <h2 id="form-title">Stuur een bericht</h2>
+
+        <form action="https://formsubmit.co/seysferre@gmail.com" method="POST">
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nieuw bericht via mijn portfolio"
+          >
+
+          <!-- Verborgen spamfilter -->
+          <input
+            type="text"
+            name="_honey"
+            class="honey-field"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          >
+
+          <div class="form-field">
+            <label for="name">Naam</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="email">E-mailadres</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Onderwerp</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="message">Je vraag of bericht</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Bericht versturen</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+</body>
+</html>
