@@ -123,6 +123,21 @@ nav a.active {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
+.profile-photo-card { align-items: center; text-align: center; }
+.profile-photo-card h2 { width: 100%; margin-top: 1rem; }
+.profile-photo-card p { margin: 0; color: #666; }
+.cv-photo { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--primary-green); object-fit: cover; }
+.skills-carousel-section > p { margin-bottom: 1.2rem; }
+.skills-carousel { padding-bottom: 1.8rem; }
+.skills-carousel .carousel-inner { padding: .2rem 2.5rem 1.4rem; }
+.skills-carousel figure { height: 100%; margin: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px; background: #f8f9fa; }
+.skills-carousel figure img { display: block; width: 100%; height: 145px; object-fit: cover; }
+.skills-carousel figcaption { padding: .55rem; color: var(--primary-green); text-align: center; font-weight: 700; }
+.skills-carousel .carousel-control-prev-icon,
+.skills-carousel .carousel-control-next-icon { filter: invert(30%) sepia(15%) saturate(1064%) hue-rotate(99deg) brightness(93%) contrast(88%); }
+.skills-carousel .carousel-indicators { bottom: -.7rem; }
+.skills-carousel .carousel-indicators [data-bs-target] { background-color: var(--primary-green); }
+
 .cv-card h2 {
   margin-bottom: 1rem;
   padding-bottom: 0.4rem;
@@ -235,4 +250,19 @@ nav a.active {
   .cv-card {
     padding: 1.2rem;
   }
+
+  .skills-carousel .carousel-inner { padding-inline: .2rem; }
+  .skills-carousel figure img { height: 180px; }
 }
+.site-footer { background: #183b2e; color: #fff; }
+.footer-inner { max-width: 1200px; margin: auto; padding: 1.3rem 2rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.footer-inner p { margin: 0; }
+.footer-inner div { display: flex; gap: 1.25rem; }
+.footer-inner a { color: #fff; text-decoration: none; }
+.footer-inner a:hover { text-decoration: underline; }
+@media (max-width: 480px) { .footer-inner { align-items: flex-start; flex-direction: column; padding: 1.2rem 1rem; } }
+
+.social-links { display:flex; gap:1.1rem; }
+.social-links a { display:inline-flex; width:1.5rem; height:1.5rem; }
+.social-links svg { width:100%; height:100%; }
+.social-links a:hover { opacity:.75; }

@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navigatie in de stijl van de indexpagina */
+/* Navigatie */
 header {
   background-color: var(--bg-color);
   border-bottom: 3px solid var(--primary-green);
@@ -86,8 +86,8 @@ nav a.active {
 }
 
 .hero h1 {
-  font-size: 2.3rem;
   margin-bottom: 0.8rem;
+  font-size: 2.3rem;
 }
 
 .hero h1 span {
@@ -97,91 +97,78 @@ nav a.active {
 .hero p {
   max-width: 650px;
   margin: 0 auto;
-  font-size: 1.1rem;
   color: #555555;
+  font-size: 1.1rem;
 }
 
-/* Twee kolommen: tekst en foto's links, overzicht rechts */
-.container {
-  max-width: 1200px;
+/* Tekst links en foto's rechts */
+.experience-container {
+  max-width: 850px;
   margin: 3rem auto;
   padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 2.5rem;
-  align-items: start;
+  display: block;
 }
 
-.passion-section,
-.overview-section {
+.experience-text {
+  text-align: center;
+}
+
+.experience-text,
+.experience-photos {
   min-width: 0;
 }
 
-.passion-section h2,
-.overview-section h2 {
-  font-size: 1.4rem;
+.experience-text h2,
+.experience-photos h2 {
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
-.passion-section h3 {
+.experience-text h3 {
+  margin: 1.4rem 0 0.6rem;
   color: var(--primary-green);
+  font-size: 1.1rem;
+}
+
+.experience-text > h3:first-of-type {
+  margin-top: 0;
+}
+
+.experience-text p {
+  margin-bottom: 1rem;
   font-size: 1.05rem;
+}
+
+.experience-item {
+  margin-top: 1.8rem;
+}
+
+.experience-item ul {
+  padding-left: 1.4rem;
+}
+
+.experience-item li {
+  margin-bottom: 0.35rem;
+}
+
+.photos-caption {
   margin-bottom: 1rem;
-}
-
-.passion-section p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.overview-section h2 {
-  text-align: center;
-}
-
-.table-caption {
-  margin-bottom: 0.5rem;
-  text-align: center;
   color: #555555;
-  font-size: 0.95rem;
 }
 
-.table-wrapper {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-th,
-td {
-  padding: 0.65rem 0.5rem;
-  border-bottom: 1px solid var(--border-color);
-  vertical-align: top;
-  font-size: 0.95rem;
-}
-
-th {
-  color: var(--primary-green);
-  font-weight: 700;
-}
-
-/* Vier foto's onder de beschrijving */
 .photo-grid {
-  margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
+  gap: 0.8rem;
 }
 
 .photo-grid img {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
 }
 
 /* Mobiele weergave */
@@ -197,7 +184,7 @@ th {
     gap: 0.75rem 1.2rem;
   }
 
-  .container {
+  .experience-container {
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 2rem;
@@ -217,7 +204,23 @@ th {
     font-size: 1.9rem;
   }
 
-  .container {
+  .experience-container {
     padding: 0 1rem;
   }
+
+  .photo-grid {
+    gap: 0.5rem;
+  }
 }
+.site-footer { background: #183b2e; color: #fff; }
+.footer-inner { max-width: 1200px; margin: auto; padding: 1.3rem 2rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.footer-inner p { margin: 0; }
+.footer-inner div { display: flex; gap: 1.25rem; }
+.footer-inner a { color: #fff; text-decoration: none; }
+.footer-inner a:hover { text-decoration: underline; }
+@media (max-width: 480px) { .footer-inner { align-items: flex-start; flex-direction: column; padding: 1.2rem 1rem; } }
+
+.social-links { display:flex; gap:1.1rem; }
+.social-links a { display:inline-flex; width:1.5rem; height:1.5rem; }
+.social-links svg { width:100%; height:100%; }
+.social-links a:hover { opacity:.75; }
