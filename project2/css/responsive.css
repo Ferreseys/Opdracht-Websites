@@ -1,0 +1,164 @@
+/* Gedeelde mobiele verfijningen voor alle portfolio-pagina's. */
+html { scroll-behavior: smooth; }
+body { min-width: 320px; overflow-x: clip; }
+img, svg { max-width: 100%; }
+.menu-toggle { display: none; }
+.nav-container .logo { text-decoration: none; }
+
+@media (max-width: 991.98px) {
+  .nav-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 0;
+    padding: .65rem 1rem;
+  }
+
+  .nav-container .logo { grid-column: 1; font-size: 1.25rem; }
+  html.js-enabled .menu-toggle {
+    grid-column: 2;
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    background: #fff;
+    cursor: pointer;
+  }
+  .menu-toggle span { display: block; width: 20px; height: 2px; border-radius: 2px; background: var(--primary-green); }
+  .menu-toggle:focus-visible { outline: 3px solid #91c6aa; outline-offset: 2px; }
+  .nav-container nav {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    margin-top: .35rem;
+  }
+  .nav-container nav ul.nav-links {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: .2rem 0 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    list-style: none;
+  }
+  html.js-enabled .nav-container nav ul.nav-links { display: none; }
+  html.js-enabled .nav-container nav ul.nav-links.is-open { display: flex; }
+  .nav-container nav ul.nav-links li { border-top: 1px solid var(--border-color); }
+  .nav-container nav ul.nav-links a {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    padding: .55rem .25rem;
+    border: 0;
+    color: var(--text-color);
+  }
+  .nav-container nav ul.nav-links a:hover,
+  .nav-container nav ul.nav-links a.active { color: var(--primary-green); }
+
+  .hero { padding: 2.5rem 1rem; }
+  .hero h1 { font-size: clamp(1.8rem, 7vw, 2.3rem); }
+  .hero p { font-size: 1rem; }
+
+  .container,
+  .content-container,
+  .experience-container,
+  .cv-container,
+  .contact-container {
+    width: calc(100% - 2rem);
+    margin: 1.5rem auto 2rem;
+    padding-inline: 0;
+    gap: 1.25rem;
+  }
+
+  .home-hero { min-height: 0; margin: .75rem .75rem 0; padding: 1.25rem; gap: 1rem; }
+  .home-hero h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .home-hero .eyebrow { font-size: .68rem; letter-spacing: .1em; }
+  .hero-photo { width: 190px; height: 190px; }
+  .home-links { width: calc(100% - 1.5rem); margin: 2rem auto 2.5rem; padding-inline: 0; }
+  .home-links h2 { font-size: 1.45rem; }
+  .home-links > .row { margin-inline: 0; }
+  .home-links > .row > * { padding-inline: .45rem; }
+
+  .grid-row { gap: 1rem; margin-bottom: 2rem; }
+  .text-block p, .content-section p, .experience-text p { font-size: 1rem; }
+  .content-img { height: auto; aspect-ratio: 4 / 3; }
+  .experience-text { text-align: left; }
+
+  .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-responsive table { min-width: 520px; }
+  .table-wrapper { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-wrapper table { min-width: 520px; }
+
+  .hobby-carousel .carousel-inner { padding: .5rem .45rem 2.25rem; }
+  .hobby-carousel .carousel-item img { height: 145px; }
+  .hobby-carousel figure { padding: .25rem; }
+  .hobby-carousel figcaption { padding: .4rem .1rem; font-size: .75rem; line-height: 1.25; }
+
+  .cv-photo { width: 124px; height: 124px; }
+  .cv-card { padding: 1.15rem; }
+  .skills-carousel .carousel-inner { padding-inline: 1.5rem; }
+  .skills-carousel figure img { height: 110px; object-fit: contain; background: #183b2e; }
+  .skills-carousel figcaption { padding: .4rem .2rem; font-size: .8rem; }
+  .detail-list li { flex-wrap: wrap; }
+  .detail-list li span:last-child { overflow-wrap: anywhere; }
+
+  .contact-info, .contact-form-section { padding: 1.25rem; }
+  .form-field input, .form-field textarea { font-size: 16px; }
+  button[type="submit"] { width: 100%; min-height: 48px; justify-self: stretch; }
+  .footer-inner { padding: 1rem; align-items: flex-start; flex-direction: column; }
+  .social-links a { width: 44px; height: 44px; align-items: center; justify-content: center; }
+  .social-links svg { width: 22px; height: 22px; }
+}
+
+@media (max-width: 380px) {
+  .nav-container { padding-inline: .75rem; }
+  .home-hero { margin-inline: .5rem; padding: 1rem; }
+  .hero-photo { width: 168px; height: 168px; }
+  .content-section { padding: 1.1rem; }
+  .hobby-carousel .carousel-item img { height: 118px; }
+  .hobby-carousel figcaption { font-size: .68rem; }
+  .skills-carousel .carousel-inner { padding-inline: 1.2rem; }
+  .skills-carousel figure img { height: 92px; object-fit: contain; background: #183b2e; }
+  .skills-carousel figcaption { font-size: .7rem; }
+}
+
+@media (max-width: 640px) {
+  .table-responsive,
+  .table-wrapper { overflow: visible; }
+  .table-responsive caption,
+  .table-wrapper caption {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 .75rem;
+    font-size: .95rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+  .table-responsive table,
+  .table-wrapper table { display: block; min-width: 0; border-collapse: separate; }
+  .table-responsive thead,
+  .table-wrapper thead { display: none; }
+  .table-responsive tbody,
+  .table-wrapper tbody { display: grid; gap: .75rem; }
+  .table-responsive tbody tr,
+  .table-wrapper tbody tr { display: block; padding: .45rem .75rem; border: 1px solid var(--border-color); border-radius: 8px; background: #fff; }
+  .table-responsive tbody td,
+  .table-wrapper tbody td { display: grid; grid-template-columns: minmax(6.5rem, .8fr) minmax(0, 1.2fr); gap: .5rem; padding: .45rem 0; border-bottom: 1px solid var(--border-color); font-size: .88rem; overflow-wrap: anywhere; }
+  .table-responsive tbody td:last-child,
+  .table-wrapper tbody td:last-child { border-bottom: 0; }
+  .table-responsive tbody td::before,
+  .table-wrapper tbody td::before { content: attr(data-label); color: var(--primary-green); font-weight: 700; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

@@ -6,6 +6,7 @@
   <title>Hobby's | Ferre Portfolio</title>
   <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/hobby.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -14,8 +15,9 @@
     <div class="nav-container">
       <a class="logo" href="index.html">Ferre <span>Portfolio</span></a>
 
-      <nav aria-label="Hoofdnavigatie">
-        <ul>
+      <button class="menu-toggle" type="button" aria-label="Menu openen" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav id="primary-navigation" aria-label="Hoofdnavigatie">
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="interesse.html">Interesses</a></li>
           <li><a href="hobby.html" class="active" aria-current="page">Hobby's</a></li>
@@ -59,8 +61,8 @@
             <button type="button" data-bs-target="#hobbyCarousel" data-bs-slide-to="1" aria-label="Fotoreeks 2"></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active"><div class="row g-2"><div class="col-md-4"><figure><img src="images/IMG_7474.JPEG" class="d-block w-100" alt="Voetbalwedstrijd gezien vanaf de tribune"><figcaption>Wedstrijddag</figcaption></figure></div><div class="col-md-4"><figure><img src="images/Onvoorwaardelijke%20Clubliefde.JPEG" class="d-block w-100" alt="Supporters en het veld in het stadion"><figcaption>Onvoorwaardelijke clubliefde</figcaption></figure></div><div class="col-md-4"><figure><img src="images/Pyro.JPEG" class="d-block w-100" alt="Sfeeractie met rood licht in het stadion"><figcaption>Stadionsfeer</figcaption></figure></div></div></div>
-            <div class="carousel-item"><div class="row g-2"><div class="col-md-4"><figure><img src="images/Red%20flag%20raising%20high.jpg" class="d-block w-100" alt="Supporters hijsen een rode vlag"><figcaption>Samen achter de ploeg</figcaption></figure></div><div class="col-md-4"><figure><img src="images/Antwerp.JPEG" class="d-block w-100" alt="Royal Antwerp FC in actie"><figcaption>Royal Antwerp FC</figcaption></figure></div><div class="col-md-4"><figure><img src="images/Antwerp2.JPEG" class="d-block w-100" alt="Voetbal en supportersbeleving bij Antwerp"><figcaption>Voetbal en beleving</figcaption></figure></div></div></div>
+            <div class="carousel-item active"><div class="row g-2"><div class="col-4"><figure><img src="images/IMG_7474.JPEG" class="d-block w-100" alt="Voetbalwedstrijd gezien vanaf de tribune"><figcaption>Wedstrijddag</figcaption></figure></div><div class="col-4"><figure><img src="images/Onvoorwaardelijke%20Clubliefde.JPEG" class="d-block w-100" alt="Supporters en het veld in het stadion"><figcaption>Onvoorwaardelijke clubliefde</figcaption></figure></div><div class="col-4"><figure><img src="images/Pyro.JPEG" class="d-block w-100" alt="Sfeeractie met rood licht in het stadion"><figcaption>Stadionsfeer</figcaption></figure></div></div></div>
+            <div class="carousel-item"><div class="row g-2"><div class="col-4"><figure><img src="images/Red%20flag%20raising%20high.jpg" class="d-block w-100" alt="Supporters hijsen een rode vlag"><figcaption>Samen achter de ploeg</figcaption></figure></div><div class="col-4"><figure><img src="images/Antwerp.JPEG" class="d-block w-100" alt="Royal Antwerp FC in actie"><figcaption>Royal Antwerp FC</figcaption></figure></div><div class="col-4"><figure><img src="images/Antwerp2.JPEG" class="d-block w-100" alt="Voetbal en supportersbeleving bij Antwerp"><figcaption>Voetbal en beleving</figcaption></figure></div></div></div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#hobbyCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Vorige</span></button>
           <button class="carousel-control-next" type="button" data-bs-target="#hobbyCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Volgende</span></button>
@@ -84,19 +86,19 @@
             </thead>
             <tbody>
               <tr>
-                <td>Sport &amp; Sfeer</td>
-                <td>Thuiswedstrijden bezoeken</td>
-                <td>Elke match</td>
+                <td data-label="Categorie">Sport &amp; Sfeer</td>
+                <td data-label="Omschrijving">Thuiswedstrijden bezoeken</td>
+                <td data-label="Frequentie">Elke match</td>
               </tr>
               <tr>
-                <td>Cultuur</td>
-                <td>Tifo's en sfeeracties</td>
-                <td>Hoogtepunten in het stadion</td>
+                <td data-label="Categorie">Cultuur</td>
+                <td data-label="Omschrijving">Tifo's en sfeeracties</td>
+                <td data-label="Beleving">Hoogtepunten in het stadion</td>
               </tr>
               <tr>
-                <td>Ontspanning</td>
-                <td>Gaming en tech-setup</td>
-                <td>Wekelijks na de lessen</td>
+                <td data-label="Categorie">Ontspanning</td>
+                <td data-label="Omschrijving">Gaming en tech-setup</td>
+                <td data-label="Frequentie">Wekelijks na de lessen</td>
               </tr>
             </tbody>
           </table>

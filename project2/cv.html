@@ -6,6 +6,7 @@
   <title>CV | Ferre Portfolio</title>
   <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/cv.css">
+  <link rel="stylesheet" href="css/responsive.css">
 <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -14,8 +15,9 @@
     <div class="nav-container">
       <a class="logo" href="index.html">Ferre <span>Portfolio</span></a>
 
-      <nav aria-label="Hoofdnavigatie">
-        <ul>
+      <button class="menu-toggle" type="button" aria-label="Menu openen" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav id="primary-navigation" aria-label="Hoofdnavigatie">
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="interesse.html">Interesses</a></li>
           <li><a href="hobby.html">Hobby's</a></li>
@@ -100,8 +102,8 @@
               <button type="button" data-bs-target="#skillsCarousel" data-bs-slide-to="1" aria-label="Vaardigheden 4 tot en met 6"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active"><div class="row g-3"><div class="col-md-4"><figure><img src="images/skill-webdesign.svg" alt="Illustratie van webdesign"><figcaption>Webdesign</figcaption></figure></div><div class="col-md-4"><figure><img src="images/skill-programmeren.svg" alt="Illustratie van programmeren"><figcaption>Programmeren</figcaption></figure></div><div class="col-md-4"><figure><img src="images/skill-samenwerken.svg" alt="Illustratie van samenwerken"><figcaption>Samenwerken</figcaption></figure></div></div></div>
-              <div class="carousel-item"><div class="row g-3"><div class="col-md-4"><figure><img src="images/skill-photoshop.svg" alt="Illustratie van Photoshop"><figcaption>Photoshop</figcaption></figure></div><div class="col-md-4"><figure><img src="images/skill-after-effects.svg" alt="Illustratie van After Effects"><figcaption>After Effects</figcaption></figure></div><div class="col-md-4"><figure><img src="images/skill-ontwikkeling.svg" alt="Illustratie van zelfontwikkeling"><figcaption>Zelfontwikkeling</figcaption></figure></div></div></div>
+              <div class="carousel-item active"><div class="row g-3"><div class="col-4"><figure><img src="images/skill-webdesign.svg" alt="Illustratie van webdesign"><figcaption>Webdesign</figcaption></figure></div><div class="col-4"><figure><img src="images/skill-programmeren.svg" alt="Illustratie van programmeren"><figcaption>Programmeren</figcaption></figure></div><div class="col-4"><figure><img src="images/skill-samenwerken.svg" alt="Illustratie van samenwerken"><figcaption>Samenwerken</figcaption></figure></div></div></div>
+              <div class="carousel-item"><div class="row g-3"><div class="col-4"><figure><img src="images/skill-photoshop.svg" alt="Illustratie van Photoshop"><figcaption>Photoshop</figcaption></figure></div><div class="col-4"><figure><img src="images/skill-after-effects.svg" alt="Illustratie van After Effects"><figcaption>After Effects</figcaption></figure></div><div class="col-4"><figure><img src="images/skill-ontwikkeling.svg" alt="Illustratie van zelfontwikkeling"><figcaption>Zelfontwikkeling</figcaption></figure></div></div></div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#skillsCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Vorige vaardigheden</span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#skillsCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Volgende vaardigheden</span></button>
